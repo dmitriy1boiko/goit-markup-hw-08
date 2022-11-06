@@ -1,0 +1,153 @@
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.2);
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  width: 528px;
+  min-height: 581px;
+  padding: 40px;
+  background: #ffffff;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+.backdrop-form {
+  width: 100%;
+}
+.button-modal {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  color: #000000;
+  background-color: inherit;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+.icon-modal {
+  fill: inherit;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover,
+  &:focus {
+  fill: var(--acent-color);
+}
+}
+.backdrop.is-hidden .modal {
+  transform: translate(-50%, -50%) scale(0);
+}
+.backdrop-icon-wrap {
+  position: relative;
+  margin-top: 4px;
+  margin-bottom: 10px;
+}
+.backdrop-icon {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  transform: translateY(-50%);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  .backdrop-input:focus + &,
+  .backdrop-input:hover + & {
+  fill: var(--acent-color);
+} 
+}
+.backdrop-text {
+  margin: 0 auto;
+  display: block;
+  margin-bottom: 12px;
+  @include font(700, 20px, 1.15, 0.03em);
+  text-align: center;
+  color: var(--secondary-text-color-dark);
+}
+.backdrop-label {
+  @include font(400, 12px, 1.17, 0.01em);
+}
+.backdrop-input {
+  outline: transparent;
+  width: 100%;
+  padding: 11px 42px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover,
+  &:focus {
+  border: 1px solid var(--acent-color);
+}
+}
+
+.backdrop-label-textarea {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+  @include font(400, 12px, 1.17, 0.01em);;
+}
+.backdrop-textarea {
+  cursor: pointer;
+  padding: 12px 16px;
+  height: 120px;
+  width: 100%;
+  margin-top: 4px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  resize: none;
+  
+}
+.backdrop-textarea:focus,
+.backdrop-textarea:hover {
+  outline: transparent;
+  border: 1px solid var(--acent-color);
+}
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+  @include font(400, 14px, 1.71, 0.03em);
+}
+.checkbox {
+  appearance: none;
+  position: absolute;
+}
+.checkbox-icon {
+  border: 2px solid var(--secondary-text-color-dark);
+  border-radius: 2px;
+  margin-right: 8px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    .checkbox:checked + & {
+      border-color: var(--acent-color);
+      background-color: var(--acent-color);
+    }
+}
+.span-lable {
+  margin-right: 8px;
+}
+.backdrop-link {
+  @include font(400, 14px, 1.71, 0.03em);
+  color: var(--acent-color);
+}
+.button-backdrop {
+  margin: 0 auto;
+  padding: 10px 52px;
+}
