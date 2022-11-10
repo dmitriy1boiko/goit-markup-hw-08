@@ -19,8 +19,10 @@
   left: 50%;
   transform: translate(-50%, -50%) scale(1);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  width: 528px;
-  min-height: 581px;
+  // width: 528px;
+  // min-height: 581px;
+  width: 450px; ;
+  min-height: 609px;
   padding: 40px;
   background: #ffffff;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
@@ -82,6 +84,9 @@
 }
 .backdrop-label {
   @include font(400, 12px, 1.17, 0.01em);
+  @media screen and (min-width:1200px) {
+    @include font(400, 14px, 1.17, 0.01em);
+  }
 }
 .backdrop-input {
   outline: transparent;
@@ -144,7 +149,7 @@
   margin-right: 8px;
 }
 .backdrop-link {
-  @include font(400, 14px, 1.71, 0.03em);
+  @include font(400, 12px, 1.71, 0.03em);
   color: var(--acent-color);
 }
 .button-backdrop {
