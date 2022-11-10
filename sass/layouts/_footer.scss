@@ -5,10 +5,10 @@
 .footer__container-general {
   display: flex;
   
-  @media screen and (min-width: 768px) and (max-width: 1199px) {
-    padding-left: 80px;
-    padding-right: 80px;
-    }
+  // @media screen and (min-width: 768px) and (max-width: 1199px) {
+  //   padding-left: 80px;
+  //   padding-right: 80px;
+  //   }
     @media screen and (max-width:1199px) {
       flex-wrap: wrap;
       flex-direction: column;
@@ -26,7 +26,7 @@
   @media screen and (min-width: 768px) {
   display: flex;
   align-items: baseline;
-  justify-content: flex-start;
+  justify-content: center;
   }
 }
 .footer__container {

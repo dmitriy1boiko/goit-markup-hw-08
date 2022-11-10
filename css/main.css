@@ -158,11 +158,17 @@ img {
   padding-top: 60px;
   padding-bottom: 60px;
 }
+@media screen and (min-width: 1200px) {
+  .section {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+}
 
 .section-title {
   margin-bottom: 50px;
   font-weight: 700;
-  font-size: 36px;
+  font-size: 28px;
   line-height: 1.17;
   letter-spacing: 0.03em;
   text-align: center;
@@ -171,7 +177,10 @@ img {
 @media screen and (max-width: 1199px) {
   .section-title {
     margin-bottom: 30px;
-    size: 28px;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.17;
+    letter-spacing: 0.03em;
   }
 }
 
@@ -209,6 +218,12 @@ img {
   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
+}
+@media screen and (min-width: 1200px) {
+  .modal {
+    width: 528px;
+    min-height: 581px;
+  }
 }
 
 .backdrop-form {
@@ -354,7 +369,7 @@ img {
           justify-content: center;
   margin-bottom: 30px;
   font-weight: 400;
-  font-size: 14px;
+  font-size: 12px;
   line-height: 1.71;
   letter-spacing: 0.03em;
 }
@@ -549,8 +564,8 @@ img {
 }
 
 .connect__icon-phone {
-  width: 10px;
-  height: 16px;
+  width: 16px;
+  height: 12px;
   margin-right: 10px;
 }
 
@@ -734,18 +749,9 @@ img {
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero-tablet-2x.jpg");
   }
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1200px) {
   .hero {
-    max-width: 1600px;
     padding: 200px 0;
-    background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../images/hero.jpg");
-    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero.jpg");
-  }
-}
-@media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
-  .hero {
-    background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../images/hero-2x.jpg");
-    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero-2x.jpg");
   }
 }
 
@@ -757,6 +763,14 @@ img {
   line-height: 1.62;
   letter-spacing: 0.06em;
   text-transform: uppercase;
+}
+@media screen and (max-width: 1200px) {
+  .hero__title {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    max-width: 360px;
+  }
 }
 @media screen and (min-width: 1200px) {
   .hero__title {
@@ -772,10 +786,6 @@ img {
   min-width: 200px;
   height: 50px;
   padding: 10px 24px;
-}
-
-.peculiarities {
-  padding-bottom: 0;
 }
 
 .peculiarities-list {
@@ -996,7 +1006,6 @@ img {
 
 .clients__item {
   height: 92px;
-  width: 100%;
   width: calc((100% - 30px) / 2);
 }
 @media screen and (min-width: 768px) {
@@ -1043,12 +1052,6 @@ img {
   display: -ms-flexbox;
   display: flex;
 }
-@media screen and (min-width: 768px) and (max-width: 1199px) {
-  .footer__container-general {
-    padding-left: 80px;
-    padding-right: 80px;
-  }
-}
 @media screen and (max-width: 1199px) {
   .footer__container-general {
     -ms-flex-wrap: wrap;
@@ -1083,9 +1086,9 @@ img {
     -webkit-box-align: baseline;
         -ms-flex-align: baseline;
             align-items: baseline;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 }
 
