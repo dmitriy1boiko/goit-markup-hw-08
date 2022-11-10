@@ -45,11 +45,28 @@
     url("../images/hero-tablet-2x.jpg");
 }
   
-@media screen and (min-width:1200px) {
+@media screen and (min-width:768px) {
+  max-width: 1600px;
   padding: 200px 0;
+  background-image: linear-gradient(
+    to right,
+    rgba(47, 48, 58, 0.4),
+    rgba(47, 48, 58, 0.4)
+  ),
+  url("../images/hero.jpg");
+  @media (min-device-pixel-ratio: 2),
+  (-webkit-min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+    background-image: linear-gradient(
+      to right,
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url("../images/hero-2x.jpg"); 
 }
 }
-
+}
 .hero__title {
   margin: 0 auto 30px;
   color: var(--primary-text-color-light);
